@@ -24,7 +24,7 @@ for (i in months){
   #Loop through each day in that month and request data
   for (j in 1:nd){
     print(sprintf("Reading Day: = %.0f",j))
-    datepath <- paste0("https://www.colorado.gov/airquality/param_summary.aspx?parametercode=88101&seeddate=",i,"%2f",j,"%2f2018&export=True")
+    datepath <- paste0("https://www.colorado.gov/airquality/param_summary.aspx?parametercode=88101&seeddate=",i,"%2f",j,"%2f",yr,"&export=True")
     pth = datepath
     a<-read_html(pth)
     b=html_nodes(a, "#txbExport") 
